@@ -1,5 +1,6 @@
 @import "utils/vars";
 @import "utils/reset";
+
 html {
 	line-height: $mainLineHeight;
 	font-size: $mainFontSize;
@@ -13,13 +14,11 @@ body {
 	font-size: $mainFontSize;
 	color: $mainFontColor;
 }
-
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
 }
-
 h1,
 h2,
 h3,
@@ -34,37 +33,27 @@ h4 {
 h3 {
 	font-size: 24px;
 }
-
 a {
 	text-decoration: none;
 }
-
 ul,
 li {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
-
 section,
 .section {
 	position: relative;
 	padding: 0;
 	margin-bottom: 80px;
-	@media screen and (max-width: $smDesktopWidth) {
-		padding: 36px 0;
-	}
 	@media screen and (max-width: $tableWidth) {
-		padding: 28px 0;
+		border-bottom: 1px solid $line-color;
 	}
 	@media screen and (max-width: $phoneWidth) {
-		padding: 20px 0;
+		margin-bottom: 40px;
 	}
 }
-
-// .wrap {
-// }
-
 .page {
 	max-width: 1312px;
 	margin: 0 auto;
@@ -85,18 +74,24 @@ section,
 		align-items: center;
 		line-height: 2;
 		&_w {
-			width: 23%;
+			width: 25%;
+			@media screen and (max-width: $desktopWidth) {
+				width: 40%;
+			}
 		}
 	}
 	&__title {
-		font-size: 24px;
+			font-size: 24px;
 			font-weight: 600;
 			line-height: 1.33;
 			letter-spacing: 0.38px;
 			color: $text-color;
 			white-space: nowrap;
-			text-overflow: ellipsis;
+			text-overflow: ellipsis!important;
 			overflow: hidden;
+			@media screen and (max-width: $smTableWidth) {
+				font-size: 18px;
+			}
 	}
 	&__back {
 		color: $sub-color;
@@ -105,6 +100,7 @@ section,
 		}
 	}
 	&__search {
+		
 		font-size: 16px;
 		line-height: 1.5;
 		letter-spacing: 0.25px;
@@ -112,160 +108,69 @@ section,
 	}
 	&__input {
 		border: none;
-		width: 100%;
-		padding: 5px 10px 0;
+		width: 105px;
 		outline: none;
+		@media screen and (max-width: $tableWidth) {
+			width: 42px;
+		}
 		&::placeholder {
 			color: $sub-color;
-			padding-left: 25px;
+			padding-left: 35px;
+			background: url(/assets/img/search.svg) 1% no-repeat;
 		}
 	}
-	&__submit {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 37px;
-		height: 100%;
-		cursor: pointer;
-		background: url(/assets/img/search.svg) 50% no-repeat;
-	}
-	 &__size {
-		color: $sub-color;
-	 }  
-
-
-	 &__item {
-		margin-left: 29.5px;
-		padding: 0 0px 5px;
-		border-bottom: 3px solid transparent;
-		transition: 0.3s;
-		
-	}
-	 &__list {
-		list-style-type: none;
-		display: flex;
-		justify-content: flex-end;
-		font-size: 15px;
-		@media screen and (max-width: $tableWidth) {
-			flex-direction: column;
-		}
-		@media screen and (max-width: 768px) {
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			flex-direction: column;
-			background: #fff;
-			border: 1px solid #ccc;
-		}
-	}
-	&__item {
-		margin-left: 29.5px;
-		padding: 0 0px 5px;
-		border-bottom: 3px solid transparent;
-		transition: 0.3s;
-		@media screen and (max-width: $tableWidth) {
-			margin-left:0px;
-			&:hover {
-				border-bottom: 3px solid $active-color;
-			}
-		}
-	}
-	&__link {
-		color: #5f49ce;
-		text-decoration: none;
-		letter-spacing: 0.5px;
-		@media screen and (max-width: $tableWidth) {
-			display: block;
-			width: 100%;
-			padding: 10px;
-			text-decoration: none;
-			border-top: 1px solid $phon-light-color;
-		}
-	}
-	 &__burger {
-		margin: 0 auto;
-		width: 320px;
-		background-color: transparent;
-		position: relative;
-		text-align: center;
-		@media screen and (max-width: $phoneWidth) {
-			width: 240px
-		}
-	} 
-	&__line {
-		position: absolute;
-		top: 8px;
-		right: 10px;
-		width: 15px;
-		height: 2px;
-		background-color: $sub-color;
-		transition: .5s all;
-		&_second,
-		&_third {
-			top: 18px;
-		}
-		&_fourth {
-			top: 28px;
-		}
-		@media screen and (min-width: 769px) {
+	&-menu {
+		max-width: 200px;
+		&__category {
+			display: flex;
+			@media screen and (max-width: $tableWidth) {
 			display: none;
-		}
-	}
-	&__menu {
-		@media screen and (max-width: $tableWidth) {
-			display: block;
+			width: 30%;
+			height: 108px;
+			background-color: #fff;
+			justify-content: center;
+			align-items: center;
 			position: absolute;
-			width: 100%;
-			bottom: 0;
-			left: 0;
-			transform: translateY(100%);
-			max-height: 0;
-			font-size: 0;
-			overflow: hidden;
-			transition: .5s all;
+			z-index: 1;
+			top: 100px;
+			right: 20px;
+			border: 1px solid #ccc;
+			text-align: center;
+			padding: 0;
+			}
+			
 		}
+		&__list {
+			padding: 0 8px;
+		}
+		&__link {
+			cursor: pointer;
+		}
+		&__size {
+			width: 70px;
+			color: $sub-color;
+			@media screen and (max-width: $tableWidth) {
+				margin: 0 auto;
+			}
+		 }
+		 &__img {
+			padding-left: 32px;
+			cursor: pointer;
+			@media screen and (max-width: $desktopWidth) {
+				padding-left: 10px;
+			}
+			@media screen and (max-width: $tableWidth) {
+				padding-left: 0px;
+			}
+		 }
 	}
 }
-// burger next
-#check-menu {
+.mobile_menu{
 	display: none;
-}
-label {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	z-index: 2;
-	line-height: 40px;
-	@media screen and (min-width: $tableWidth) {
-		display: none;
+	@media screen and (max-width: $tableWidth){
+		display: block;
 	}
 }
-#check-menu:checked~.header__menu {
-	max-height: 500px;
-	font-size: 16px;
-}
-
-#check-menu:checked~.header__line_first {
-	display: none;
-}
-
-#check-menu:checked~.header__line_second {
-	transform: rotate(45deg);
-}
-
-#check-menu:checked~.header__line_third {
-	transform: rotate(-45deg);
-}
-
-#check-menu:checked~.header__line_fourth {
-	display: none;
-}
-
-
-
 .sugg {
 	letter-spacing: 0.4px;
 	line-height: 1.6;
@@ -285,6 +190,10 @@ label {
 		font-stretch: normal;
 		font-style: normal;
 		line-height: normal;
+		@media screen and (max-width: $smDesktopWidth) {
+			font-size: 32px;
+			padding: 40px 0 40px;
+		}
 		}
 		span {
 			color: $active-color;
@@ -434,6 +343,7 @@ label {
 	}
 	&__list {
 		width: 60px;
+		min-width: 60px;
 		display: flex;
 		  justify-content: center;
 		  vertical-align: top;
@@ -478,11 +388,6 @@ label {
 		flex-direction: column;
 	}
 }
-.rere {
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-}
 .video {
 	display: flex;
 	justify-content: space-between;
@@ -491,8 +396,10 @@ label {
 		flex-wrap: wrap;
 		justify-content: flex-start;
 	}
+	@media screen and (max-width: $tableWidth) {
+		padding: 15px 0;
+	}
 	&__img {
-		// width: 100%;
 		&:hover {
 			&:after {
 			content: '';
@@ -526,7 +433,16 @@ label {
 		margin: 0 auto;
 		padding: 8px 8px 0 8px;
 		position: relative;
-		
+	}
+	&__time {
+		color: $phon-color;
+		position: absolute;
+		right: 16px;
+		bottom: 8px;
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 1.6;
+		letter-spacing: 0.4px;
 	}
 	&__text {
 		line-height: 1.6;

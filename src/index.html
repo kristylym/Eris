@@ -5,13 +5,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title>Eris</title>
-      <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
-      <link rel="stylesheet" href="/assets/css/swiper.min.css">
-      <!-- <script  src = " https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js " > </script> -->
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
    </head>
-   <body>
-      <div class="page">
+   <body><div class="page">
          <header>
             <div class="header">
                <div class="header__block">
@@ -25,42 +22,28 @@
                   <div class="header__search">
                      <form action="" method="post">
                         <input type="search" name="" placeholder="Search" class="header__input" />
-                        <input type="submit" name="" value="" class="header__submit" />
                      </form>
                   </div>
-                  <div class="header__burger ">
-                     <input type="checkbox" id="check-menu">
-                     <label for="check-menu"></label>
-                     <div class="header__line header__line_first"></div>
-                     <div class="header__line header__line_second"></div>
-                     <div class="header__line header__line_third"></div>
-                     <div class="header__line header__line_fourth"></div>
-                     <nav class="header__menu">
-                        <ul class="header__list">
-                           <li class="header__item">
-                              <img src="/assets/img/question-copy.svg" alt="">
-                           </li>
-                           <li class="header__item">
-                              <div class="header__size">Font Size</div>
-                           </li>
-                           <li class="header__item">
-                              <div class="header__img"><img src="/assets/img/ava.png" alt=""></div>
-                           </li>
-                        </ul>
-                     </nav>
+                  <a href="#" class="mobile_menu"><img src="/assets/img/top-copy.svg" alt=""></a>
+                  <div class="header-menu">
+                     <div class="header-menu__category">
+                           <div class="header-menu__list">
+                                 <a class="header-menu__link" href="#">
+                                    <img src="/assets/img/question-copy.svg" alt="">
+                                 </a>
+                           </div>
+                           <div class="header-menu__list">
+                                 <a class="header-menu__link" href="#">
+                                    <div class="header-menu__size">Font Size</div>
+                                 </a>
+                           </div>
+                           <div class="header-menu__list">
+                                 <a class="header-menu__link" href="#">
+                                 <img class="header-menu__img" src="/assets/img/ava.png" alt="">
+                                 </a>
+                           </div>
+                     </div>
                   </div>
-
-
-                     <!-- <div class="header__search">
-                        <form action="" method="post">
-                           <input type="search" name="" placeholder="Search" class="header__input" />
-                           <input type="submit" name="" value="" class="header__submit" />
-                        </form>
-                     </div>
-                     <div class="header__keg"><img src="/assets/img/question-copy.svg" alt="">
-                     </div>
-                     <div class="header__size">Font Size</div>
-                     <div class="header__img"><img src="/assets/img/ava.png" alt=""></div> -->
                </div>
             </div>
          </header>
@@ -131,6 +114,7 @@
                   <div class="video__play">
                      <a href="#open-modal-1" class="video__img">
                         <img class="" src="/assets/img/rectangle-copy.png" alt="">
+                        <div class="video__time">6:12</div>
                      </a>
                      <a href="#close">
                         <div id="open-modal-1" class="modal">
@@ -147,7 +131,8 @@
                <div class="video__item">
                   <div class="video__play">
                      <a href="#open-modal-2" class="video__img">
-                        <img class="" src="/assets/img/rectangle-copy-2.png" alt="">
+                        <img class="" src="/assets/img/rectangle-copy.png" alt="">
+                        <div class="video__time">11:06</div>
                      </a>
                      <a href="#close">
                         <div id="open-modal-2" class="modal">
@@ -164,7 +149,8 @@
                <div class="video__item">
                   <div class="video__play">
                      <a href="#open-modal-3" class="video__img">
-                        <img class="" src="/assets/img/rectangle-copy.png" alt="">
+                        <img class="" src="/assets/img/rectangle-copy-2.png" alt="">
+                        <div class="video__time">1:18</div>
                      </a>
                      <a href="#close">
                         <div id="open-modal-3" class="modal">
@@ -181,7 +167,8 @@
                <div class="video__item">
                   <div class="video__play">
                      <a href="#open-modal-4" class="video__img">
-                        <img class="" src="/assets/img/rectangle-copy.png" alt="">
+                        <img class="" src="/assets/img/rectangle-copy-3.png" alt="">
+                        <div class="video__time">31:48</div>
                      </a>
                      <a href="#close">
                         <div id="open-modal-4" class="modal">
@@ -324,6 +311,6 @@
                <div class="">Privacy</div>
             </div>
          </footer>
-      </div>  
+      </div>
    </body>
 </html>
